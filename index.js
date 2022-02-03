@@ -2,14 +2,15 @@ currentGuess = ""
 guessIndex = 0;
 gameFinished = false
 
+word = "Words"
+
 fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
     .then( function(response) {
         response.text().then( function(text) {
-            words = text.split("\r\n")
+            var words = text.split("\r\n")
+            word = words[Math.floor(Math.random()*words.length)]
         })
     })
-
-word = words[Math.floor(Math.random()*words.length)]
 
 document.addEventListener("keypress", (event) => {
     if (gameFinished) return
