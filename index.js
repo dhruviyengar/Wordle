@@ -13,10 +13,13 @@ fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
     })
 
 document.addEventListener("keypress", (event) => {
-    if (gameFinished) return
     if (event.key == "Enter") {
-        submitGuess()
-    } else if (isLetter(event.key)) {
+        if (gameFinished == false) {
+            submitGuess()
+        } else {
+            location.reload()
+        }
+    } else if (isLetter(event.key) && gameFinished == false) {
         addLetter(event.key.toUpperCase())
     }
 }, false)
@@ -71,10 +74,11 @@ function endGame(won) {
     gameFinished = true
     document.getElementById("popup").style.display = "block";
     if (won) {
-        document.getElementById("result").innerHTML = "Result: Victory"
+        document.getElementById("result").innerHTML = "Result: <span class='correct'>Victory</span>"
     } else {
-        document.getElementById("result").innerHTML = "Result: Defeat"
+        document.getElementById("result").innerHTML = "Result: <span class='red'>Defeat</span>"
     }
+    document.getElementById("popup").style.animation = "slideIn 1s"
     document.getElementById("word").innerHTML = "Word: " + word.toUpperCase()
 }
 

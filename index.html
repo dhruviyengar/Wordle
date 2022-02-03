@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -11,12 +12,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap" rel="stylesheet">
         <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
         <link href="index.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Wordle</title>
     </head>
-    <body>
+    <body id="body">
         <script src="index.js"></script>
-
+        <div>
+            <img src="logo.png" width="256" height="128">
+        </div>
         <div class="container">
             <div id="popup" class="popup">
                 <span class="w3-xxlarge">&nbsp;</span>
@@ -24,9 +26,6 @@
                 <p id="word" class="w3-xxlarge">Word</p>
                 <p class="w3-medium">&nbsp;</p>
                 <button onclick="location.reload()">Play Again</button>
-            </div>
-            <div>
-                <span class="w3-xxxlarge">Wordle</span>
             </div>
             <div class="guess">
                 <span class="w3-xxlarge" id="guess1">&nbsp;</span>

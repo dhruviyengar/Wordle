@@ -5,7 +5,7 @@ body {
     background-color: #524E4D;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2000
+    z-index: 2000;
 }
 
 .container {
@@ -30,7 +30,12 @@ body {
     width: 30%;
     height: 50%;
     opacity: 80%;
-    background-color: black
+    background-color: black;
+}
+
+@keyframes slideIn {
+    from { top: 0%; opacity: 10% }
+    to { top: 25%; opacity: 80% } 
 }
 
 .currentGuess {
@@ -40,7 +45,7 @@ body {
 }
 
 .wrong {
-    color: red
+    color: #A1A1A1
 }
 
 .contains {
@@ -49,6 +54,10 @@ body {
 
 .correct {
     color: green
+}
+
+.red {
+    color: red
 }
 
 button {
