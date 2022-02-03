@@ -2,18 +2,12 @@ currentGuess = ""
 guessIndex = 0;
 gameFinished = false
 
-words = [
-    'words',
-    'judge',
-    'throw',
-    'files',
-    'index',
-    'lines',
-    'enter',
-    'guess',
-    'games',
-    'finds'
-]
+fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
+    .then( function(response) {
+        response.text().then( function(text) {
+            words = text.split("\r\n")
+        })
+    })
 
 word = words[Math.floor(Math.random()*words.length)]
 
