@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap" rel="stylesheet">
+        <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Wordle</title>
+    </head>
+    <body>
+        <script src="index.js"></script>
+
+        <div class="container">
+            <div id="popup" class="popup">
+                <span class="w3-xxlarge">&nbsp;</span>
+                <p id="result" class="w3-xxlarge">Result</p>
+                <p id="word" class="w3-xxlarge">Word</p>
+                <p class="w3-medium">&nbsp;</p>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+            <div>
+                <span class="w3-xxxlarge">Wordle</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess1">&nbsp;</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess2">&nbsp;</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess3">&nbsp;</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess4">&nbsp;</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess5">&nbsp;</span>
+            </div>
+            <div class="guess">
+                <span class="w3-xxlarge" id="guess6">&nbsp;</span>
+            </div>
+            <div class="currentGuess">
+                <p class="w3-small">CURRENT GUESS</p>
+                <span class="w3-xxlarge" id="currentGuess">...</span>
+            </div>
+        </div>
+    </body>
+</html>

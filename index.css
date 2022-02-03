@@ -1,0 +1,64 @@
+body {
+    font-family: "Ubuntu";
+    font-size: "25px";
+    text-align: center;
+    background-color: #524E4D;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2000
+}
+
+.container {
+    margin-top: 5%;
+    font-family: "Ubuntu";
+    font-size: "50px";
+    color: #FFF;
+}
+
+.container p {
+    font-size: 50px;
+    margin-bottom: 2px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 35%;
+    overflow: auto;
+    top: 25%;
+    width: 30%;
+    height: 50%;
+    opacity: 80%;
+    background-color: black
+}
+
+.currentGuess {
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #333130
+}
+
+.wrong {
+    color: red
+}
+
+.contains {
+    color: yellow
+}
+
+.correct {
+    color: green
+}
+
+button {
+    background-color: darkblue;
+    border: #524E4D;
+    border-radius: 10px
+}
+
+button:hover {
+    background-color: gray;
+    border: #524E4D;
+    border-radius: 10px
+}
