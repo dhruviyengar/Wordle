@@ -23,6 +23,10 @@ fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
     })
 
 document.addEventListener("keypress", (event) => {
+    if (event.key == " " && gameFinished) {
+        location.reload()
+        return
+    }
     if (event.key == "Enter") {
         if (!gameFinished) {
             submitGuess()
