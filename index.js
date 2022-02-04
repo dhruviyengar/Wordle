@@ -2,6 +2,16 @@ currentGuess = ""
 guessIndex = 0;
 gameFinished = false
 
+seconds = 0
+
+function refreshSeconds() {
+    seconds++;
+    console.log('refresh')
+    document.getElementById("time").innerHTML = "Time: " + parseTime(seconds)
+}
+
+setInterval(refreshSeconds, 1000)
+
 word = "Words"
 
 fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
@@ -80,9 +90,22 @@ function endGame(won) {
     }
     document.getElementById("popup").style.animation = "slideIn 1s"
     document.getElementById("word").innerHTML = "Word: " + word.toUpperCase()
+    document.getElementById("time-result").innerHTML = "Time: " + parseTime(seconds)
+    document.getElementById("guesses").innerHTML = "Guesses: " + guessIndex
 }
 
 function isLetter(char) {
     return (/[a-zA-Z]/).test(char)
 }
 
+function parseTime(seconds) {
+    if (seconds < 60) {
+        if (seconds < 10) return "00:0" + seconds
+        return "00:" + seconds
+    } else {
+        if (seconds % 60 < 10) {
+            return Math.floor(seconds / 60) + ":0" + seconds % 60
+        }
+        return Math.floor(seconds / 60) + ":" + seconds % 60
+    }
+}

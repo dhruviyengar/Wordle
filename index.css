@@ -20,6 +20,11 @@ body {
     margin-bottom: 2px;
 }
 
+.left {
+    text-align: left;
+    padding-right: 200%
+}
+
 .popup {
     display: none;
     position: absolute;
