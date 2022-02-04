@@ -5,8 +5,8 @@ gameFinished = false
 seconds = 0
 
 function refreshSeconds() {
+    if (gameFinished) return
     seconds++;
-    console.log('refresh')
     document.getElementById("time").innerHTML = "Time: " + parseTime(seconds)
 }
 
@@ -24,12 +24,12 @@ fetch("https://raw.githubusercontent.com/SecretAgent-YT/Wordle/main/words.txt")
 
 document.addEventListener("keypress", (event) => {
     if (event.key == "Enter") {
-        if (gameFinished == false) {
+        if (!gameFinished) {
             submitGuess()
         } else {
             location.reload()
         }
-    } else if (isLetter(event.key) && gameFinished == false) {
+    } else if (isLetter(event.key) && !gameFinished) {
         addLetter(event.key.toUpperCase())
     }
 }, false)

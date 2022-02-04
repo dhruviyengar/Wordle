@@ -34,19 +34,20 @@ body {
     top: 25%;
     width: 30%;
     height: 50%;
-    opacity: 80%;
+    opacity: 90%;
     background-color: black;
 }
 
 @keyframes slideIn {
     from { top: 0%; opacity: 10% }
-    to { top: 25%; opacity: 80% } 
+    to { top: 25%; opacity: 90% } 
 }
 
 .currentGuess {
     margin-left: 30%;
     margin-right: 30%;
-    background-color: #333130
+    background-color: #333130;
+    border-radius: 25px
 }
 
 .wrong {
